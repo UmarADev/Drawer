@@ -6,7 +6,20 @@ Console.WriteLine("Choose one option to draw:\n1. Triangle\n2. Square\n3. Rhombu
 
 string userInput = Console.ReadLine();
 
-static void DrawTriangle (string triangle)
+switch(userInput)
+{
+    case "1":
+        DrawTriangle();
+        break;
+    case "2": 
+        DrawSquare();
+        break;
+    case "3":
+        DrawRhombus();
+        break;
+}
+
+static void DrawTriangle ()
 {
     for (int i = 0; i < 5; i++)
     {
@@ -22,7 +35,7 @@ static void DrawTriangle (string triangle)
     }
 }
 
-static void DrawSquare (string square)
+static void DrawSquare ()
 {
     for (int i = 0; i < 5; i++)
     {
@@ -34,7 +47,7 @@ static void DrawSquare (string square)
     }
 }
 
-static void DrawRhombus(string rhombus)
+static void DrawRhombus()
 {
     for (int i = 0; i < 5; i++)
     {
