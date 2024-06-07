@@ -1,22 +1,26 @@
 ﻿using System;
-using System.Globalization;
 
-Console.WriteLine("Welcome to the Drawer!");
-Console.WriteLine("Choose one option to draw:\n1. Triangle\n2. Square\n3. Rhombus");
+bool userChoise = true;
 
-string userInput = Console.ReadLine();
-
-switch(userInput)
+while (userChoise)
 {
-    case "1":
-        DrawTriangle();
-        break;
-    case "2": 
-        DrawSquare();
-        break;
-    case "3":
-        DrawRhombus();
-        break;
+    Console.WriteLine("Welcome to the Drawer!");
+    Console.WriteLine("Choose one option to draw:\n1. Triangle\n2. Square\n3. Rhombus");
+    
+    string userInput = Console.ReadLine();
+    
+    switch(userInput)
+    {
+        case "1":
+            DrawTriangle();
+            break;
+        case "2": 
+            DrawSquare();
+            break;
+        case "3":
+            DrawRhombus();
+            break;
+    }
 }
 
 static void DrawTriangle ()
