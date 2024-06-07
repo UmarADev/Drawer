@@ -1,14 +1,14 @@
 ﻿using System;
 
-bool userChoise = true;
+string userChoise = "y";
 
-while (userChoise)
+while (userChoise == "y")
 {
     Console.WriteLine("Welcome to the Drawer!");
     Console.WriteLine("Choose one option to draw:\n1. Triangle\n2. Square\n3. Rhombus");
-    
+
     string userInput = Console.ReadLine();
-    
+
     switch(userInput)
     {
         case "1":
@@ -21,6 +21,10 @@ while (userChoise)
             DrawRhombus();
             break;
     }
+
+    Console.WriteLine("Do you want to continue? Y / N");
+    string userAnswer = Console.ReadLine().ToLower();
+    userChoise = Convert.ToString(userAnswer);
 }
 
 static void DrawTriangle ()
@@ -64,19 +68,6 @@ static void DrawRhombus()
             Console.Write("*");
         }
         Console.WriteLine();
-    }
-    for (int i = 0; i < 4; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            Console.Write(" ");
-        }
-        for (int k = 0; k < 4; k++)
-        {
-            Console.WriteLine("*");
-        }
-    }
-
-    
+    }  
     
 }
